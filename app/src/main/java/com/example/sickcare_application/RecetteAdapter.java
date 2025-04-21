@@ -80,13 +80,13 @@ public class RecetteAdapter extends RecyclerView.Adapter<RecetteAdapter.RecetteV
     public static class RecetteViewHolder extends RecyclerView.ViewHolder {
         TextView nom;
         ImageButton btnFavori;
-        Button btnVoir; // Ajout de la référence au bouton "Voir"
+        Button btnVoir;
 
         public RecetteViewHolder(View itemView) {
             super(itemView);
             nom = itemView.findViewById(R.id.recette_nom);
             btnFavori = itemView.findViewById(R.id.btnFavori);
-            btnVoir = itemView.findViewById(R.id.btnVoir); // Initialisation du bouton "Voir"
+            btnVoir = itemView.findViewById(R.id.btnVoir);
         }
     }
 

@@ -91,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void ouvrirInscription(View v) {
-        Intent intent = new Intent(this, RegisterActivity.class); // Assurez-vous que InscriptionActivity est bien créée
+        Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }
 }

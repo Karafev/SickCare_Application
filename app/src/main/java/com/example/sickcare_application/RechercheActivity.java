@@ -119,7 +119,7 @@ public class RechercheActivity extends AppCompatActivity {
                                     obj.optString("description_recette"),
                                     obj.optString("etape_recette"),
                                     alimentsRecette,
-                                    obj.optString("image_recette", "")  // Ajout du champ image_recette, valeur vide si non présente
+                                    obj.optString("image_recette", "")
                             );
 
                             allRecettes.add(recette);

@@ -48,16 +48,16 @@ public class MainActivity extends AppCompatActivity {
             // Supprimer le token des SharedPreferences (déconnexion)
             SharedPreferences sharedPreferences = getSharedPreferences("AppPrefs", MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.remove("auth_token"); // Supprimer le token
+            editor.remove("auth_token");
             editor.apply();
 
             // Afficher un message de déconnexion
             Toast.makeText(MainActivity.this, "Déconnexion réussie", Toast.LENGTH_SHORT).show();
 
             // Lancer l'écran de connexion ou un autre écran approprié
-            Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class); // Remplace "LoginActivity" par le nom de ton activité de connexion
+            Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(loginIntent);
-            finish(); // Ferme l'activité actuelle pour éviter que l'utilisateur revienne en arrière
+            finish();
         });
     }
 }
