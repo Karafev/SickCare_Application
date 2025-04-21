@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Button;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -36,12 +37,14 @@ public class RecetteAdapter extends RecyclerView.Adapter<RecetteAdapter.RecetteV
         Recette recette = recettes.get(position);
         holder.nom.setText(recette.getNomRecette());
 
+        // Gestion du bouton Favori
         if (favoriDao.isFavori(recette.getIdRecette())) {
             holder.btnFavori.setImageResource(R.drawable.baseline_star_24);
         } else {
             holder.btnFavori.setImageResource(R.drawable.baseline_star_border_24);
         }
 
+        // Ajouter ou retirer des favoris
         holder.btnFavori.setOnClickListener(v -> {
             if (favoriDao.isFavori(recette.getIdRecette())) {
                 favoriDao.removeFavori(recette.getIdRecette());
@@ -51,16 +54,19 @@ public class RecetteAdapter extends RecyclerView.Adapter<RecetteAdapter.RecetteV
                 holder.btnFavori.setImageResource(R.drawable.baseline_star_24);
             }
 
+            // Rafraîchir la liste des favoris
             if (context instanceof RechercheActivity) {
-                ((RechercheActivity) context).refreshFavoris();  // 🔁 Mise à jour dynamique
+                ((RechercheActivity) context).refreshFavoris();
             }
         });
 
-        holder.itemView.setOnClickListener(v -> {
+        // Gestion du clic sur le bouton "Voir"
+        holder.btnVoir.setOnClickListener(v -> {
             Intent intent = new Intent(context, RecetteActivity.class);
             intent.putExtra("nom", recette.getNomRecette());
             intent.putExtra("description", recette.getDescriptionRecette());
             intent.putExtra("etapes", recette.getEtapeRecette());
+            intent.putExtra("image", recette.getImageRecette());
             intent.putStringArrayListExtra("aliments", new ArrayList<>(recette.getAliments()));
             context.startActivity(intent);
         });
@@ -74,11 +80,13 @@ public class RecetteAdapter extends RecyclerView.Adapter<RecetteAdapter.RecetteV
     public static class RecetteViewHolder extends RecyclerView.ViewHolder {
         TextView nom;
         ImageButton btnFavori;
+        Button btnVoir; // Ajout de la référence au bouton "Voir"
 
         public RecetteViewHolder(View itemView) {
             super(itemView);
             nom = itemView.findViewById(R.id.recette_nom);
             btnFavori = itemView.findViewById(R.id.btnFavori);
+            btnVoir = itemView.findViewById(R.id.btnVoir); // Initialisation du bouton "Voir"
         }
     }
 

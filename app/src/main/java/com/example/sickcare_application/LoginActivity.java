@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
 
-        String url = "http://10.0.2.2/SickCare/public/index.php/api/login";
+        String url = "http://10.0.2.2/~fevzican.karamercan/SickCare/public/index.php/api/login";
 
         StringRequest req = new StringRequest(Request.Method.POST, url,
                 this::processLoginRequest,

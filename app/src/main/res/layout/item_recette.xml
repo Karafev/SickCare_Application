@@ -6,6 +6,7 @@
     android:padding="12dp"
     android:gravity="center_vertical">
 
+    <!-- Nom de la recette -->
     <TextView
         android:id="@+id/recette_nom"
         android:layout_width="0dp"
@@ -15,19 +16,20 @@
         android:textSize="16sp"
         android:textStyle="bold"/>
 
+    <!-- Bouton Voir -->
     <Button
         android:id="@+id/btnVoir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Voir"/>
+
+    <!-- Bouton Favori -->
     <ImageButton
         android:id="@+id/btnFavori"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/baseline_star_border_24"
-    android:background="?attr/selectableItemBackgroundBorderless"
-    android:contentDescription="Favori"
-    android:padding="8dp"/>
-
-
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Favori"
+        android:padding="8dp"/>
 </LinearLayout>

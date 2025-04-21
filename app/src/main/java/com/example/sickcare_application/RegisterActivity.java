@@ -51,7 +51,7 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
-        String url = "http://10.0.2.2/SickCare/public/index.php/api/register";
+        String url = "http://10.0.2.2/~fevzican.karamercan/SickCare/public/index.php/api/register";
 
         StringRequest req = new StringRequest(Request.Method.POST, url,
                 this::traiterReponseEnregistrement,

@@ -55,6 +55,7 @@ dependencies {
     implementation(libs.volley)
     implementation(libs.core.ktx)
     implementation (libs.recyclerview)
+    implementation (libs.picasso)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

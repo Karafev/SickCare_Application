@@ -52,7 +52,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     private void getProfileDetails(String token) {
-        String url = "http://10.0.2.2/SickCare/public/api/details";
+        String url = "http://10.0.2.2/~fevzican.karamercan/SickCare/public/api/details";
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 response -> {

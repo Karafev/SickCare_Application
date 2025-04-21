@@ -22,6 +22,15 @@
             android:paddingBottom="16dp"
             android:textStyle="bold" />
 
+        <!-- Image de la recette -->
+        <ImageView
+            android:id="@+id/imageRecette"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"
+            android:background="#CCCCCC" />
+
         <!-- Explication du nom -->
         <TextView
             android:layout_width="match_parent"

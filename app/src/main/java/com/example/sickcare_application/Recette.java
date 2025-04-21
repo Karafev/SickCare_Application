@@ -7,16 +7,17 @@ public class Recette {
     private String nom_recette;
     private String description_recette;
     private String etape_recette;
-    private List<String> aliments; // Liste des aliments associés à la recette
+    private List<String> aliments;
+    private String image_recette;
 
-    public Recette(int id_recette, String nom_recette, String description_recette, String etape_recette, List<String> aliments) {
+    public Recette(int id_recette, String nom_recette, String description_recette, String etape_recette, List<String> aliments, String image_recette) {
         this.id_recette = id_recette;
         this.nom_recette = nom_recette;
         this.description_recette = description_recette;
         this.etape_recette = etape_recette;
-        this.aliments = aliments; // Initialiser la liste des aliments
+        this.aliments = aliments;
+        this.image_recette = image_recette;
     }
-
 
     public int getIdRecette() {
         return id_recette;
@@ -40,5 +41,13 @@ public class Recette {
 
     public void setAliments(List<String> aliments) {
         this.aliments = aliments;
+    }
+
+    public String getImageRecette() {
+        return image_recette;
+    }
+
+    public void setImageRecette(String image_recette) {
+        this.image_recette = image_recette;
     }
 }

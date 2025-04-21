@@ -78,7 +78,7 @@ public class RechercheActivity extends AppCompatActivity {
     }
 
     private void fetchRecettes() {
-        String url = "http://10.0.2.2/SickCare/public/api/details";
+        String url = "http://10.0.2.2/~fevzican.karamercan/SickCare/public/api/details";
         StringRequest request = new StringRequest(Request.Method.GET, url,
                 response -> {
                     try {
@@ -118,8 +118,10 @@ public class RechercheActivity extends AppCompatActivity {
                                     obj.getString("nom_recette"),
                                     obj.optString("description_recette"),
                                     obj.optString("etape_recette"),
-                                    alimentsRecette
+                                    alimentsRecette,
+                                    obj.optString("image_recette", "")  // Ajout du champ image_recette, valeur vide si non présente
                             );
+
                             allRecettes.add(recette);
                         }
 
