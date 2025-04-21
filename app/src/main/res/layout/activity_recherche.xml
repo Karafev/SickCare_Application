@@ -1,59 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
 
+    <!-- Titre de la page -->
     <TextView
-        android:id="@+id/recette_incompatible"
+        android:id="@+id/recherche_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
-        android:layout_marginBottom="19dp"
-        android:text="Recette incompatible"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Liste des Recettes"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginBottom="12dp" />
 
+    <!-- Barre de recherche -->
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Rechercher une recette ou un aliment..." />
+
+    <!-- Boutons de filtrage -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center">
+
+        <!-- Filtre aliments interdits -->
+        <ToggleButton
+            android:id="@+id/toggleButtonFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="Filtre activé"
+            android:textOff="Filtre désactivé"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:background="@android:drawable/btn_default"
+            android:layout_marginEnd="16dp"/>
+
+        <!--  bouton pour filtrer les favoris -->
+        <ToggleButton
+            android:id="@+id/toggleButtonFavoris"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filtrer les favoris"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:background="#4CAF50"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- Liste des recettes -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recette_incompatible" />
+        android:layout_weight="1"
+        android:scrollbars="vertical" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="353dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView">
-
-        <Button
-            android:id="@+id/toute"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Toutes" />
-
-        <Button
-            android:id="@+id/fav"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Favorie" />
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Bouton retour -->
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retour en arrière"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:background="#3F51B5"
+        android:layout_marginTop="16dp"
+        android:padding="14dp"/>
+</LinearLayout>

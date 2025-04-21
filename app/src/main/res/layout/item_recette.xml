@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/recette_nom"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Nom de la recette"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btnVoir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voir"/>
+    <ImageButton
+        android:id="@+id/btnFavori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_star_border_24"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:contentDescription="Favori"
+    android:padding="8dp"/>
+
+
+</LinearLayout>

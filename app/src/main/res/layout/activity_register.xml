@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <!-- Titre de la page -->
+    <TextView
+        android:id="@+id/texteTitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="S'enregistrer"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"/>
+
+    <!-- Champ pour l'email -->
+    <EditText
+        android:id="@+id/champEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="16dp"
+        android:padding="10dp"/>
+    <!-- Champ pour le nom -->
+    <EditText
+        android:id="@+id/champNom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nom"
+        android:layout_marginBottom="16dp"
+        android:padding="10dp"/>
+
+    <!-- Champ pour le prénom -->
+    <EditText
+        android:id="@+id/champPrenom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Prénom"
+        android:layout_marginBottom="16dp"
+        android:padding="10dp"/>
+
+
+    <!-- Champ pour la maladie -->
+    <EditText
+        android:id="@+id/champMaladie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Maladie"
+        android:layout_marginBottom="16dp"
+        android:padding="10dp"/>
+
+    <!-- Champ pour le mot de passe -->
+    <EditText
+        android:id="@+id/champMotDePasse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mot de passe"
+        android:inputType="textPassword"
+        android:layout_marginBottom="16dp"
+        android:padding="10dp"/>
+
+    <!-- Champ pour la confirmation du mot de passe -->
+    <EditText
+        android:id="@+id/champConfirmerMotDePasse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirmer le mot de passe"
+        android:inputType="textPassword"
+        android:layout_marginBottom="24dp"
+        android:padding="10dp"/>
+
+    <!-- Bouton pour s'enregistrer -->
+    <Button
+        android:id="@+id/boutonEnregistrer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:onClick="faireEnregistrer"
+        android:padding="12dp"
+        android:text="S'enregistrer"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+</LinearLayout>
