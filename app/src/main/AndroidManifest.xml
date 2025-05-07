@@ -38,7 +38,7 @@
         <!-- Déclaration de RecetteActivity -->
         <activity android:name=".RecetteActivity" android:exported="true" />
 
-        <!-- Déclaration de RegisterActivity (Inscription) -->
+        <!-- Déclaration de RegisterActivity -->
         <activity android:name=".RegisterActivity" android:exported="true" />
 
     </application>

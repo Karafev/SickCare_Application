@@ -33,6 +33,9 @@ public class RecetteAdapter extends RecyclerView.Adapter<RecetteAdapter.RecetteV
     }
 
     @Override
+    /**
+     * 
+     */
     public void onBindViewHolder(RecetteViewHolder holder, int position) {
         Recette recette = recettes.get(position);
         holder.nom.setText(recette.getNomRecette());
@@ -77,6 +80,10 @@ public class RecetteAdapter extends RecyclerView.Adapter<RecetteAdapter.RecetteV
         return recettes.size();
     }
 
+
+    /**
+     *
+     */
     public static class RecetteViewHolder extends RecyclerView.ViewHolder {
         TextView nom;
         ImageButton btnFavori;
